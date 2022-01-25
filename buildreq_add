@@ -10,9 +10,5 @@ gcc-libgcc32
 gcc-libstdc++32
 glibc-dev32
 glibc-libc32
-GoogleBenchmark
-GoogleBenchmark-dev
-googletest
-googletest-dev
 zlib-dev
 zlib-staticdev
