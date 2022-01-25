@@ -1,0 +1,18 @@
+#
+# This file contains extra pkgconfig build requirements that don't get picked up but are
+# desirable. One name per line, no whitespace.
+#
+buildreq-cmake
+buildreq-configure
+findutils
+gcc-dev32
+gcc-libgcc32
+gcc-libstdc++32
+glibc-dev32
+glibc-libc32
+GoogleBenchmark
+GoogleBenchmark-dev
+googletest
+googletest-dev
+zlib-dev
+zlib-staticdev

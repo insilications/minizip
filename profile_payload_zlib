@@ -1,0 +1,32 @@
+export LD_LIBRARY_PATH="$PWD:/usr/local/nvidia/lib64:/usr/local/nvidia/lib64/gbm:/usr/local/nvidia/lib64/vdpau:/usr/local/nvidia/lib64/xorg/modules/drivers:/usr/local/nvidia/lib64/xorg/modules/extensions:/usr/local/cuda/lib64:/usr/lib64/haswell:/usr/lib64/dri:/usr/lib64:/usr/lib:/aot/intel/oneapi/compiler/latest/linux/compiler/lib/intel64_lin:/aot/intel/oneapi/compiler/latest/linux/lib:/aot/intel/oneapi/mkl/latest/lib/intel64:/aot/intel/oneapi/tbb/latest/lib/intel64/gcc4.8:/usr/share:/usr/lib64/wine:/usr/local/nvidia/lib32:/usr/local/nvidia/lib32/vdpau:/usr/lib32:/usr/lib32/wine"
+export LIBRARY_PATH="$PWD:/usr/local/nvidia/lib64:/usr/local/nvidia/lib64/gbm:/usr/local/nvidia/lib64/vdpau:/usr/local/nvidia/lib64/xorg/modules/drivers:/usr/local/nvidia/lib64/xorg/modules/extensions:/usr/local/cuda/lib64:/usr/lib64/haswell:/usr/lib64/dri:/usr/lib64:/usr/lib:/aot/intel/oneapi/compiler/latest/linux/compiler/lib/intel64_lin:/aot/intel/oneapi/compiler/latest/linux/lib:/aot/intel/oneapi/mkl/latest/lib/intel64:/aot/intel/oneapi/tbb/latest/lib/intel64/gcc4.8:/usr/share:/usr/lib64/wine:/usr/local/nvidia/lib32:/usr/local/nvidia/lib32/vdpau:/usr/lib32:/usr/lib32/wine"
+#
+cat *.c | ./minigzip -6 | ./minigzip -d > /dev/null
+cat *.c | ./minigzip -4 | ./minigzip -d > /dev/null
+cat *.c | ./minigzip -9 | ./minigzip -d > /dev/null
+cat *.c | ./minigzip64 -6 | ./minigzip64 -d > /dev/null
+cat *.c | ./minigzip64 -4 | ./minigzip64 -d > /dev/null
+cat *.c | ./minigzip64 -9 | ./minigzip64 -d > /dev/null
+dd if=/dev/urandom bs=786438 count=70 | base64 > test.txt
+cat test.txt | ./minigzip -6 | ./minigzip -d > /dev/null
+cat test.txt | ./minigzip -4 | ./minigzip -d > /dev/null
+cat test.txt | ./minigzip -9 | ./minigzip -d > /dev/null
+cat test.txt | ./minigzip64 -6 | ./minigzip64 -d > /dev/null
+cat test.txt | ./minigzip64 -4 | ./minigzip64 -d > /dev/null
+cat test.txt | ./minigzip64 -9 | ./minigzip64 -d > /dev/null
+./examplesh
+./example
+./example64
+#
+cat *.c | ./minigzipsh -6 | ./minigzipsh -d > /dev/null
+cat *.c | ./minigzipsh -4 | ./minigzipsh -d > /dev/null
+cat *.c | ./minigzipsh -9 | ./minigzipsh -d > /dev/null
+cat *.c | ./minigzipsh -6 | ./minigzipsh -d > /dev/null
+cat *.c | ./minigzipsh -4 | ./minigzipsh -d > /dev/null
+cat *.c | ./minigzipsh -9 | ./minigzipsh -d > /dev/null
+cat test.txt | ./minigzipsh -6 | ./minigzipsh -d > /dev/null
+cat test.txt | ./minigzipsh -4 | ./minigzipsh -d > /dev/null
+cat test.txt | ./minigzipsh -9 | ./minigzipsh -d > /dev/null
+cat test.txt | ./minigzipsh -6 | ./minigzipsh -d > /dev/null
+cat test.txt | ./minigzipsh -4 | ./minigzipsh -d > /dev/null
+cat test.txt | ./minigzipsh -9 | ./minigzipsh -d > /dev/null
